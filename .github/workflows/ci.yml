@@ -1,0 +1,98 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+permissions:
+  contents: read
+
+jobs:
+  validate:
+    name: Validate data and links
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Validate JSON and schema
+        run: |
+          python3 - <<'PY'
+          import json, re, sys
+
+          errors = []
+
+          # crisis-resources.json
+          with open("data/crisis-resources.json", encoding="utf-8") as f:
+              crisis = json.load(f)
+          if not crisis.get("resources"):
+              errors.append("crisis-resources.json: no resources listed")
+
+          # resources.json
+          with open("data/resources.json", encoding="utf-8") as f:
+              data = json.load(f)
+
+          orgs = data.get("organizations", [])
+          if not orgs:
+              errors.append("resources.json: no organizations listed")
+
+          required = ["id", "name", "website", "missionStatement", "primaryLocation"]
+          seen_ids = set()
+          for i, org in enumerate(orgs):
+              label = org.get("name") or f"index {i}"
+              for field in required:
+                  if not org.get(field):
+                      errors.append(f"{label}: missing required field '{field}'")
+              website = org.get("website", "")
+              if website and not re.match(r"^https://", website):
+                  errors.append(f"{label}: website must start with https:// ({website})")
+              oid = org.get("id")
+              if oid in seen_ids:
+                  errors.append(f"{label}: duplicate id '{oid}'")
+              seen_ids.add(oid)
+
+          if errors:
+              print("VALIDATION FAILED:")
+              for e in errors:
+                  print(f"  - {e}")
+              sys.exit(1)
+
+          print(f"OK: {len(orgs)} organizations, {len(crisis['resources'])} crisis resources")
+          PY
+
+      - name: Check external links
+        run: |
+          python3 - <<'PY'
+          import json, urllib.request, ssl
+
+          with open("data/resources.json", encoding="utf-8") as f:
+              orgs = json.load(f)["organizations"]
+
+          ctx = ssl.create_default_context()
+          failures = []
+          for org in orgs:
+              url = org["website"]
+              req = urllib.request.Request(
+                  url,
+                  method="GET",
+                  headers={"User-Agent": "Mozilla/5.0 (VigilantValkyrie link check)"},
+              )
+              try:
+                  with urllib.request.urlopen(req, timeout=20, context=ctx) as resp:
+                      code = resp.getcode()
+                      print(f"{code}  {url}")
+                      if code >= 400:
+                          failures.append(f"{url} -> {code}")
+              except Exception as exc:  # noqa: BLE001
+                  print(f"WARN  {url} -> {exc}")
+                  failures.append(f"{url} -> {exc}")
+
+          if failures:
+              print("\nLink check found problems:")
+              for f in failures:
+                  print(f"  - {f}")
+              raise SystemExit(1)
+          print("\nAll links reachable")
+        continue-on-error: true

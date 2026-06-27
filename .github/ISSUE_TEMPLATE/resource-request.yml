@@ -1,0 +1,55 @@
+name: Resource request
+description: Suggest an organization that supports female veterans
+title: "[Resource] "
+labels: ["resource-request"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for suggesting a resource for female veterans. Please share the
+        details below so we can review and add it.
+  - type: input
+    id: name
+    attributes:
+      label: Organization name
+      placeholder: Example Veterans Support Network
+    validations:
+      required: true
+  - type: input
+    id: website
+    attributes:
+      label: Website URL
+      description: Must be the organization's own site and start with https://
+      placeholder: https://example.org/
+    validations:
+      required: true
+  - type: textarea
+    id: mission
+    attributes:
+      label: Mission statement
+      description: One or two sentences describing what the organization does.
+    validations:
+      required: true
+  - type: input
+    id: location
+    attributes:
+      label: Primary location
+      placeholder: City, State (or Nationwide)
+    validations:
+      required: true
+  - type: textarea
+    id: why
+    attributes:
+      label: Why should this be listed?
+      description: How does this organization specifically help female veterans?
+    validations:
+      required: false
+  - type: checkboxes
+    id: confirm
+    attributes:
+      label: Confirmation
+      options:
+        - label: This is a legitimate organization that serves female veterans.
+          required: true
+        - label: The website URL is correct and currently works.
+          required: true
