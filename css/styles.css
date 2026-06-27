@@ -1,18 +1,14 @@
 :root {
   --black: #000000;
-  --black-950: #050505;
-  --black-900: #0a0a0a;
-  --black-800: #111111;
-  --black-700: #1a1a1a;
-  --black-600: #242424;
-  --red: #c41e3a;
-  --red-soft: #ff4d6d;
   --text: #f5f5f5;
-  --text-muted: #8c8c8c;
-  --text-dim: #5a5a5a;
-  --border: rgba(255, 255, 255, 0.08);
-  --border-strong: rgba(255, 255, 255, 0.14);
-  --shadow: 0 24px 48px rgba(0, 0, 0, 0.6);
+  --text-muted: #9a9a9a;
+  --text-dim: #666666;
+  --accent: #ffffff;
+  --accent-muted: rgba(255, 255, 255, 0.55);
+  --red: #c41e3a;
+  --border: rgba(255, 255, 255, 0.07);
+  --border-strong: rgba(255, 255, 255, 0.16);
+  --border-accent: rgba(255, 255, 255, 0.28);
   --radius: 10px;
   --radius-sm: 6px;
   --maxw: 1140px;
@@ -27,6 +23,7 @@
 
 html {
   scroll-behavior: smooth;
+  background-color: var(--black);
 }
 
 body {
@@ -34,8 +31,6 @@ body {
   font-family: var(--font);
   color: var(--text);
   background-color: var(--black);
-  background-image:
-    radial-gradient(ellipse 80% 50% at 50% -10%, rgba(255, 255, 255, 0.04), transparent 55%);
   line-height: 1.65;
   min-height: 100vh;
   -webkit-font-smoothing: antialiased;
@@ -43,6 +38,10 @@ body {
 
 a {
   color: var(--text);
+}
+
+main {
+  background: var(--black);
 }
 
 .skip-link {
@@ -62,7 +61,7 @@ a {
 }
 
 :focus-visible {
-  outline: 2px solid rgba(255, 255, 255, 0.85);
+  outline: 2px solid var(--accent);
   outline-offset: 3px;
   border-radius: 4px;
 }
@@ -132,7 +131,7 @@ a {
   text-align: center;
   padding: 4rem 1.25rem 3rem;
   border-bottom: 1px solid var(--border);
-  background: linear-gradient(180deg, var(--black-950) 0%, var(--black) 100%);
+  background: var(--black);
 }
 
 .hero__inner {
@@ -170,8 +169,8 @@ a {
   margin: 0.75rem 0 1.5rem;
   font-size: clamp(0.95rem, 2.5vw, 1.15rem);
   font-weight: 500;
-  color: var(--text-muted);
-  letter-spacing: 0.12em;
+  color: var(--accent-muted);
+  letter-spacing: 0.14em;
   text-transform: uppercase;
 }
 
@@ -186,6 +185,7 @@ a {
 /* Controls */
 .controls {
   padding: 2.5rem 1.25rem 0.75rem;
+  background: var(--black);
 }
 
 .controls__inner {
@@ -211,10 +211,10 @@ a {
   padding: 0.95rem 1.15rem;
   font-size: 0.95rem;
   color: var(--text);
-  background: var(--black-900);
+  background: var(--black);
   border: 1px solid var(--border);
   border-radius: var(--radius);
-  transition: border-color 0.2s ease, background 0.2s ease;
+  transition: border-color 0.2s ease;
 }
 
 .search__input::placeholder {
@@ -222,8 +222,7 @@ a {
 }
 
 .search__input:focus {
-  border-color: var(--border-strong);
-  background: var(--black-800);
+  border-color: var(--border-accent);
   outline: none;
 }
 
@@ -239,6 +238,7 @@ a {
   max-width: var(--maxw);
   margin: 0 auto;
   padding: 1rem 1.25rem 4rem;
+  background: var(--black);
 }
 
 .resources__grid {
@@ -257,19 +257,17 @@ a {
 .card {
   display: flex;
   flex-direction: column;
-  background: var(--black-900);
+  background: var(--black);
   border: 1px solid var(--border);
   border-radius: var(--radius);
   padding: 1.5rem;
-  box-shadow: var(--shadow);
-  transition: border-color 0.2s ease, transform 0.2s ease, background 0.2s ease;
+  transition: border-color 0.2s ease, transform 0.2s ease;
 }
 
 .card:hover,
 .card:focus-within {
   transform: translateY(-2px);
-  border-color: var(--border-strong);
-  background: var(--black-800);
+  border-color: var(--border-accent);
 }
 
 .card__name {
@@ -335,8 +333,9 @@ a {
 }
 
 .card__note {
-  background: rgba(196, 30, 58, 0.1);
-  border: 1px solid rgba(196, 30, 58, 0.25);
+  background: var(--black);
+  border: 1px solid rgba(196, 30, 58, 0.35);
+  border-left: 3px solid var(--red);
   border-radius: var(--radius-sm);
   padding: 0.75rem 0.9rem;
   font-size: 0.86rem;
@@ -356,7 +355,7 @@ a {
 .card__tag {
   font-size: 0.68rem;
   color: var(--text-muted);
-  background: var(--black-700);
+  background: var(--black);
   border: 1px solid var(--border);
   border-radius: var(--radius-sm);
   padding: 0.25rem 0.55rem;
@@ -374,13 +373,13 @@ a {
   gap: 0.45rem;
   font-weight: 600;
   color: var(--black);
-  background: var(--text);
+  background: var(--accent);
   text-decoration: none;
   padding: 0.65rem 1.1rem;
   border-radius: var(--radius-sm);
   font-size: 0.85rem;
   letter-spacing: 0.02em;
-  transition: opacity 0.2s ease, transform 0.2s ease;
+  transition: opacity 0.2s ease;
 }
 
 .card__link:hover,
