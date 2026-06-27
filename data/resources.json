@@ -1,0 +1,151 @@
+{
+  "title": "Vigilant Valkyrie",
+  "tagline": "Helping Female Veterans",
+  "subtitle": "Resource list for Female Veterans",
+  "organizations": [
+    {
+      "id": "military-one-source",
+      "name": "Military One Source",
+      "website": "https://www.militaryonesource.mil/",
+      "websiteLabel": "militaryonesource.mil",
+      "missionStatement": "Military OneSource is a free, official War Department resource for service members, eligible family members and select others, offering trusted information, tools and benefits to support military life.",
+      "notes": "Military OneSource offers FREE counseling for service members AND their dependents. Twelve free sessions per issue. Your counseling information or resource utilization is not reported to or available to your Chain of Command.",
+      "description": null,
+      "primaryLocation": "Nationwide",
+      "tags": ["counseling", "national", "benefits"]
+    },
+    {
+      "id": "warrior-pathh",
+      "name": "Warrior PATHH (Permission to Start Dreaming Foundation)",
+      "website": "https://ptsdfoundation.org/warrior-pathh/",
+      "websiteLabel": "ptsdfoundation.org",
+      "missionStatement": "Warrior PATHH (Progressive & Alternative Training Helping Heroes) is our nation's first non-clinical, peer-to-peer program designed to cultivate and facilitate Post-Traumatic Growth (PTG). PTG occurs when a person turns adversity, trauma, or other challenges into positive psychological change. That is a shift that enables an individual to stop simply surviving and instead begin to THRIVE - not in spite of, but because of their life experiences.",
+      "notes": "ZERO COST TO VETERAN/1st Responder; travel, food, lodging etc. provided.",
+      "description": "Warrior PATHH begins with a multi-day on-site initiation followed by 90+ days of continued training, delivered and supported by a network of instructors through an online platform. All instructors have personally walked this road from struggle to strength.",
+      "primaryLocation": "Washington State (other state locations also available)",
+      "tags": ["peer-support", "retreat", "post-traumatic-growth", "first-responders"]
+    },
+    {
+      "id": "military-womens-collective",
+      "name": "Military Women's Collective",
+      "website": "https://www.militarywomenscollective.org/",
+      "websiteLabel": "militarywomenscollective.org",
+      "missionStatement": "Military Women's Collective (MWC) is committed to ending the epidemic of women veteran suicide by uniting military-affiliated women in their communities. We foster connections, provide mental health resources, create opportunities for adventure and personal growth, offer career mentorship, and provide the ongoing support women veterans need to help them navigate the challenges they face after leaving the military.",
+      "notes": null,
+      "description": null,
+      "primaryLocation": "Southern California",
+      "tags": ["community", "mental-health", "mentorship", "suicide-prevention"]
+    },
+    {
+      "id": "daughters-of-valor",
+      "name": "Daughters of Valor",
+      "website": "https://www.daughtersofvalor.org/",
+      "websiteLabel": "daughtersofvalor.org",
+      "missionStatement": "Daughters of Valor began with one woman, one uniform, and one realization: that even the strongest among us need a place to feel heard. Our community was created to break the isolation that often follows service. What started as a simple need for connection has grown into a safe, peer-led space where women who serve, and those who stand beside them, can find understanding, strength, and support.",
+      "notes": null,
+      "description": null,
+      "primaryLocation": "Whatcom County, WA",
+      "tags": ["community", "peer-support"]
+    },
+    {
+      "id": "operation-juliet",
+      "name": "Operation Juliet",
+      "website": "https://operationjuliet.org/",
+      "websiteLabel": "operationjuliet.org",
+      "missionStatement": "Operation Juliet offers a continuum of programs designed to help female veterans heal, connect, and thrive - from our multi-day (not so) Average Jane Retreat, to monthly OUTPOST Gatherings, quarterly CADENCE Workshops, and Wellness Scholarships for continued mental health care. Explore our programs to see how we're restoring resilience and empowering women veterans on their journey toward wellness, purpose, and leadership.",
+      "notes": null,
+      "description": null,
+      "primaryLocation": "Billings/Bozeman, MT",
+      "tags": ["retreat", "mental-health", "wellness", "community"]
+    },
+    {
+      "id": "the-pink-berets",
+      "name": "The Pink Berets",
+      "website": "https://thepinkberets.org/",
+      "websiteLabel": "thepinkberets.org",
+      "missionStatement": "It is the mission, duty and purpose of The Pink Berets to address, educate, coordinate, and provide aid and relief to active duty women of the United States Armed Forces and Veterans seeking assistance with invisible injuries such as Post Traumatic Stress Disorder, Military Sexual Trauma and Combat Trauma Stress on a local and national level. Our goals and commitment are based solely upon helping women who have been afflicted with the devastating effects of PTSD, MST and CTS and addressing their symptoms before they progress to homelessness, unemployment, and suicide.",
+      "notes": null,
+      "description": null,
+      "primaryLocation": "Boerne, Texas",
+      "tags": ["ptsd", "military-sexual-trauma", "mental-health", "national"]
+    },
+    {
+      "id": "grace-after-fire",
+      "name": "Grace After Fire",
+      "website": "https://graceafterfire.org/",
+      "websiteLabel": "graceafterfire.org",
+      "missionStatement": "The mission of Grace After Fire is to provide the means for Women Veterans to gain knowledge, insight and self-renewal.",
+      "notes": null,
+      "description": null,
+      "primaryLocation": "Houston, Texas",
+      "tags": ["wellness", "community"]
+    },
+    {
+      "id": "military-womens-memorial",
+      "name": "Military Women's Memorial",
+      "website": "https://womensmemorial.org/",
+      "websiteLabel": "womensmemorial.org",
+      "missionStatement": "The Military Women's Memorial honors and tells the stories of women, past and present, who serve our nation.",
+      "notes": null,
+      "description": null,
+      "primaryLocation": "Located outside of Arlington National Cemetery",
+      "tags": ["memorial", "history", "recognition"]
+    },
+    {
+      "id": "women-veterans-and-families-network",
+      "name": "Women Veterans and Families Network",
+      "website": "https://wvfn.org/",
+      "websiteLabel": "wvfn.org",
+      "missionStatement": "Our mission is to empower, support and promote the general welfare of women veterans and military families through professional development, resources, networking, advocacy, mentorship and outreach.",
+      "notes": null,
+      "description": null,
+      "primaryLocation": "Nationwide",
+      "tags": ["advocacy", "professional-development", "mentorship", "families"]
+    },
+    {
+      "id": "burn-pits-360",
+      "name": "Burn Pits 360",
+      "website": "https://www.burnpits360.org/",
+      "websiteLabel": "burnpits360.org",
+      "missionStatement": "Burn Pits 360 is the only 501(c)(3) nonprofit organization to offer an independent burn pit exposure registry in which family members can record the names of warriors who served the nation but have passed away due to illnesses from toxic injury. We are entirely dedicated to improving post-deployment health outcomes for current and former military personnel.",
+      "notes": null,
+      "description": null,
+      "primaryLocation": "Robstown, Texas",
+      "tags": ["toxic-exposure", "health", "advocacy", "registry"]
+    },
+    {
+      "id": "combat-boots-to-red-bottoms",
+      "name": "Combat Boots to Red Bottoms",
+      "website": "https://combatboots2redbottoms.com/",
+      "websiteLabel": "combatboots2redbottoms.com",
+      "missionStatement": "A Female Veteran owned company that celebrates the accomplishments of Women Warriors. We empower and celebrate Military women, past and present, through our apparel, networking and services. We encourage all women who serve to not just elevate your status, but \"Create your own status.\"",
+      "notes": null,
+      "description": null,
+      "primaryLocation": "Mississippi",
+      "tags": ["community", "networking", "empowerment"]
+    },
+    {
+      "id": "woven-women-veterans-network",
+      "name": "Woven: Women Veterans Network",
+      "website": "https://wovenwomenvets.org/",
+      "websiteLabel": "wovenwomenvets.org",
+      "missionStatement": "To provide a unique social network of Women Veterans to foster connections and build relationships in local communities and across the nation.",
+      "notes": null,
+      "description": null,
+      "primaryLocation": "Boston, Massachusetts",
+      "tags": ["community", "networking"]
+    },
+    {
+      "id": "female-veterans-network",
+      "name": "Female Veterans Network",
+      "website": "https://femaleveteransnetwork.org/",
+      "websiteLabel": "femaleveteransnetwork.org",
+      "missionStatement": "Female Veterans Network was formed to unite Female Veterans and develop camaraderie. In order to accomplish this, we provide a place to meet where we can discuss the issues and causes that are important and unique to Female Veterans.",
+      "notes": null,
+      "description": null,
+      "primaryLocation": "Florida",
+      "tags": ["community", "networking", "camaraderie"]
+    }
+  ],
+  "footer": "There are many more organizations that provide resources to Female Veterans. Our list is just the beginning of resources offered to Women Warriors!"
+}

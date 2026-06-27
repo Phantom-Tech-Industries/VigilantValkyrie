@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="referrer" content="strict-origin-when-cross-origin" />
+  <title>Vigilant Valkyrie - Helping Female Veterans</title>
+  <meta name="description" content="Vigilant Valkyrie is a resource directory helping female veterans find organizations offering support, counseling, community, and care." />
+  <meta name="theme-color" content="#0B1426" />
+
+  <meta property="og:title" content="Vigilant Valkyrie - Helping Female Veterans" />
+  <meta property="og:description" content="A resource directory helping female veterans find support, counseling, community, and care." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://vigilantvalkyrie.org" />
+
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg" />
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+  <a class="skip-link" href="#resources">Skip to resources</a>
+
+  <aside class="crisis-banner" id="crisis-banner" aria-label="Crisis help resources" hidden>
+    <div class="crisis-banner__inner">
+      <p class="crisis-banner__heading" id="crisis-heading"></p>
+      <p class="crisis-banner__message" id="crisis-message"></p>
+      <ul class="crisis-banner__list" id="crisis-list"></ul>
+    </div>
+  </aside>
+
+  <header class="hero">
+    <div class="hero__inner">
+      <p class="hero__eyebrow">~ Vigilant Valkyrie ~</p>
+      <h1 class="hero__title">Vigilant Valkyrie</h1>
+      <p class="hero__tagline">Helping Female Veterans</p>
+      <p class="hero__intro">
+        A curated directory of organizations standing watch for women who served.
+        Find counseling, community, retreats, advocacy, and care - all in one place.
+      </p>
+    </div>
+  </header>
+
+  <main>
+    <section class="controls" aria-label="Search resources">
+      <div class="controls__inner">
+        <label class="search" for="search-input">
+          <span class="search__label">Search resources</span>
+          <input
+            type="search"
+            id="search-input"
+            class="search__input"
+            placeholder="Search by name, location, or keyword..."
+            autocomplete="off"
+          />
+        </label>
+        <p class="controls__count" id="result-count" aria-live="polite"></p>
+      </div>
+    </section>
+
+    <section id="resources" class="resources" aria-label="Resource organizations">
+      <div class="resources__grid" id="resource-grid"></div>
+      <p class="resources__empty" id="empty-state" hidden>
+        No resources match your search. Try a different term.
+      </p>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="site-footer__inner">
+      <p class="site-footer__note" id="footer-note"></p>
+      <p class="site-footer__brand">
+        Vigilant Valkyrie &middot; A Phantom Tech Industries project
+      </p>
+    </div>
+  </footer>
+
+  <script src="js/app.js" defer></script>
+</body>
+</html>
